@@ -56,7 +56,12 @@ nav a:hover {
     color: var(--neon-purple);
 }
 
-/* ヒーローセクション */
+nav a.active {
+    color: var(--neon-purple);
+    font-weight: bold;
+}
+
+/* ヒーローセクション（index.html用） */
 .hero {
     height: 100vh;
     display: flex;
@@ -100,11 +105,11 @@ nav a:hover {
 }
 
 .hero p {
-    font-size: 1.3rem;
+issory: 1.3rem;
     z-index: 1;
 }
 
-/* About TEAMセクション */
+/* About TEAMセクション（index.html用） */
 .about-team {
     padding: 50px 20px;
     max-width: 1200px;
@@ -124,7 +129,7 @@ nav a:hover {
     margin: 0 auto 20px;
 }
 
-/* Team Projectsセクション */
+/* Team Projectsセクション（index.html用） */
 .team-projects {
     padding: 50px 20px;
     max-width: 1200px;
@@ -181,7 +186,7 @@ nav a:hover {
     margin: 20px auto 0;
 }
 
-/* コンテンツ */
+/* コンテンツ（index.html用） */
 .content {
     padding: 50px 20px;
     max-width: 1200px;
@@ -198,6 +203,31 @@ nav a:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+/* Toolsセクション（tools.html用） */
+.tools {
+    padding: 100px 20px 50px; /* ヘッダー固定を考慮 */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.tools h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.tools p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.tool-list {
+    /* 将来のツール一覧用のコンテナ */
+    min-height: 100px; /* 空でもスペースを確保 */
 }
 
 /* フッター */
@@ -222,7 +252,7 @@ footer p:hover {
 /* ネオンエフェクト */
 .neon-text {
     color: var(--neon-purple);
-    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple);
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--updates);
 }
 
 /* スクロールアニメーション */
@@ -257,7 +287,8 @@ footer p:hover {
 
     .about-team h2,
     .team-projects h2,
-    .content h2 {
+    .content h2,
+    .tools h1 {
         font-size: 2rem;
     }
 
@@ -271,6 +302,10 @@ footer p:hover {
     .project-right,
     .project-bottom {
         margin: 10px auto;
+    }
+
+    .tools p {
+        font-size: 1rem;
     }
 
     footer p {
@@ -289,5 +324,9 @@ footer p:hover {
 
     .hero p {
         font-size: 1.5rem;
+    }
+
+    .tools h1 {
+        font-size: 3.5rem;
     }
 }
