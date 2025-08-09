@@ -7,11 +7,11 @@
     --transition: 0.3s ease;
     --logo-width: 500px;
     --logo-width-mobile: 350px;
-    --hero-content-gap: 10px;
+    --hero-content-gap: 4px;
     --card-bg: rgba(255, 255, 255, 0.1);
     --card-border: 1px solid var(--neon-purple);
-    --card-width: 350px; /* カードの幅 */
-    --card-gap: 20px; /* カード間の隙間 */
+    --card-width: 350px;
+    --card-gap: 20px;
 }
 
 /* リセット */
@@ -169,17 +169,16 @@ nav a:hover {
     line-height: 1.5;
 }
 
-/* カードの配置 */
 .project-left {
-    margin-right: auto; /* 左寄せ */
+    margin-right: auto;
 }
 
 .project-right {
-    margin-left: auto; /* 右寄せ */
+    margin-left: auto;
 }
 
 .project-bottom {
-    margin: 20px auto 0; /* 下のカードを中央に */
+    margin: 20px auto 0;
 }
 
 /* コンテンツ */
@@ -199,6 +198,25 @@ nav a:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 20px;
+}
+
+/* フッター */
+footer {
+    padding: 20px;
+    background: var(--primary-black);
+    text-align: center;
+    border-top: 1px solid var(--neon-purple);
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--primary-white);
+    opacity: 0.8;
+    transition: color var(--transition);
+}
+
+footer p:hover {
+    color: var(--neon-purple);
 }
 
 /* ネオンエフェクト */
@@ -244,15 +262,19 @@ nav a:hover {
     }
 
     .project-card {
-        width: 100%; /* モバイルではフル幅 */
+        width: 100%;
         max-width: 400px;
-        margin: 10px auto; /* 縦に並べる */
+        margin: 10px auto;
     }
 
     .project-left,
     .project-right,
     .project-bottom {
-        margin: 10px auto; /* モバイルでは中央揃え */
+        margin: 10px auto;
+    }
+
+    footer p {
+        font-size: 0.9rem;
     }
 }
 
