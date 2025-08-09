@@ -73,6 +73,12 @@ nav a:hover {
     background: rgba(0, 0, 0, 0.5);
 }
 
+.hero .logo {
+    max-width: 150px; /* ロゴサイズ調整 */
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
 .hero h1 {
     font-size: 4rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -83,6 +89,26 @@ nav a:hover {
     font-size: 1.5rem;
     margin-top: 10px;
     z-index: 1;
+}
+
+/* About TEAMセクション */
+.about-team {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-team p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 20px;
 }
 
 /* コンテンツ */
@@ -124,6 +150,10 @@ nav a:hover {
 
 /* レスポンシブ */
 @media (max-width: 768px) {
+    .hero .logo {
+        max-width: 100px;
+    }
+
     .hero h1 {
         font-size: 2.5rem;
     }
@@ -132,6 +162,7 @@ nav a:hover {
         font-size: 1rem;
     }
 
+    .about-team h2,
     .content h2 {
         font-size: 2rem;
     }
