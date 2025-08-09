@@ -5,8 +5,9 @@
     --neon-purple: #ff00ff;
     --gradient-purple: #4b0082;
     --transition: 0.3s ease;
-    --logo-width: 500px; /* ロゴのデフォルト幅（大きく設定） */
-    --logo-width-mobile: 350px; /* モバイル用のロゴ幅 */
+    --logo-width: 250px; /* ロゴのデフォルト幅 */
+    --logo-width-mobile: 150px; /* モバイル用のロゴ幅 */
+    --hero-content-gap: 10px; /* ロゴ、h1、pの間隔 */
 }
 
 /* リセット */
@@ -60,9 +61,11 @@ nav a:hover {
     align-items: center;
     text-align: center;
     position: relative;
+    background: var(--primary-black); /* 仮の背景 */
     /* 背景画像はカスタマイズ用にコメント */
     /* background: url('path/to/your/image.jpg') center/cover no-repeat; */
-    background: var(--primary-black); /* 仮の背景 */
+    padding: 20px; /* コンテンツの余白 */
+    gap: var(--hero-content-gap); /* ロゴ、h1、pの間隔を統一 */
 }
 
 .hero::before {
@@ -76,29 +79,27 @@ nav a:hover {
 }
 
 .hero .logo {
-    width: var(--logo-width); /* ロゴサイズをCSS変数で管理 */
-    max-width: 300%; /* コンテナの幅を超えない */
+    width: var(--logo-width); /* ロゴサイズ */
+    max-width: 100%; /* コンテナの幅を超えない */
     height: auto; /* アスペクト比を維持 */
-    margin-bottom: 20px;
     z-index: 1;
-    transition: transform var(--transition); /* ホバーアニメーション用 */
+    transition: transform var(--transition);
 }
 
-/* ロゴにホバーエフェクト（オプション） */
+/* ロゴにホバーエフェクト */
 .hero .logo:hover {
-    transform: scale(1.1); /* ホバー時に少し拡大 */
-    filter: drop-shadow(0 0 10px var(--neon-purple)); /* ネオン輝き */
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px var(--neon-purple));
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem; /* フォントサイズを少し小さく */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-top: 10px;
+    font-size: 1.3rem; /* 説明も少し小さく */
     z-index: 1;
 }
 
@@ -162,11 +163,11 @@ nav a:hover {
 /* レスポンシブ */
 @media (max-width: 768px) {
     .hero .logo {
-        width: var(--logo-width-mobile); /* モバイル用のロゴサイズ */
+        width: var(--logo-width-mobile);
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* モバイルでさらに小さく */
     }
 
     .hero p {
@@ -182,11 +183,23 @@ nav a:hover {
         font-size: 12px;
         margin: 0 10px;
     }
+
+    .hero {
+        gap: 8px; /* モバイルでは間隔をさらに縮める */
+    }
 }
 
-/* さらに大きな画面用のロゴサイズ（オプション） */
+/* 大画面用の調整 */
 @media (min-width: 1200px) {
     .hero .logo {
-        width: calc(var(--logo-width) * 1.2); /* 大画面でさらに大きく */
+        width: calc(var(--logo-width) * 1.2); /* 大画面でロゴを大きく */
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
     }
 }
