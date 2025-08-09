@@ -61,7 +61,7 @@ nav a.active {
     font-weight: bold;
 }
 
-/* ヒーローセクション（index.html用） */
+/* ヒーローセクション */
 .hero {
     height: 100vh;
     display: flex;
@@ -105,11 +105,11 @@ nav a.active {
 }
 
 .hero p {
-issory: 1.3rem;
+    font-size: 1.3rem;
     z-index: 1;
 }
 
-/* About TEAMセクション（index.html用） */
+/* About TEAMセクション */
 .about-team {
     padding: 50px 20px;
     max-width: 1200px;
@@ -129,7 +129,7 @@ issory: 1.3rem;
     margin: 0 auto 20px;
 }
 
-/* Team Projectsセクション（index.html用） */
+/* Team Projectsセクション */
 .team-projects {
     padding: 50px 20px;
     max-width: 1200px;
@@ -186,7 +186,7 @@ issory: 1.3rem;
     margin: 20px auto 0;
 }
 
-/* コンテンツ（index.html用） */
+/* コンテンツ */
 .content {
     padding: 50px 20px;
     max-width: 1200px;
@@ -205,9 +205,9 @@ issory: 1.3rem;
     margin-bottom: 20px;
 }
 
-/* Toolsセクション（tools.html用） */
+/* Toolsセクション */
 .tools {
-    padding: 100px 20px 50px; /* ヘッダー固定を考慮 */
+    padding: 100px 20px 50px;
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
@@ -226,8 +226,69 @@ issory: 1.3rem;
 }
 
 .tool-list {
-    /* 将来のツール一覧用のコンテナ */
-    min-height: 100px; /* 空でもスペースを確保 */
+    min-height: 100px;
+}
+
+/* Contractセクション */
+.contract {
+    padding: 100px 20px 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contract h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.terms-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.terms-ja {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.terms-ja p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.terms-en {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+}
+
+.terms-en p {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.terms-content {
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.terms-content h2 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: var(--neon-purple);
+}
+
+.terms-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 /* フッター */
@@ -252,7 +313,7 @@ footer p:hover {
 /* ネオンエフェクト */
 .neon-text {
     color: var(--neon-purple);
-    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--updates);
+    text-shadow: 0 0 10px var(--neon-purple), 0 0 20px var(--neon-purple), 0 0 30px var(--neon-purple);
 }
 
 /* スクロールアニメーション */
@@ -288,7 +349,8 @@ footer p:hover {
     .about-team h2,
     .team-projects h2,
     .content h2,
-    .tools h1 {
+    .tools h1,
+    .contract h1 {
         font-size: 2rem;
     }
 
@@ -306,6 +368,29 @@ footer p:hover {
 
     .tools p {
         font-size: 1rem;
+    }
+
+    .terms-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .terms-ja,
+    .terms-en {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .terms-ja p {
+        font-size: 1rem;
+    }
+
+    .terms-en p {
+        font-size: 0.7rem;
+    }
+
+    .terms-content h2 {
+        font-size: 1.3rem;
     }
 
     footer p {
@@ -326,7 +411,8 @@ footer p:hover {
         font-size: 1.5rem;
     }
 
-    .tools h1 {
+    .tools h1,
+    .contract h1 {
         font-size: 3.5rem;
     }
 }
