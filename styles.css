@@ -5,9 +5,11 @@
     --neon-purple: #ff00ff;
     --gradient-purple: #4b0082;
     --transition: 0.3s ease;
-    --logo-width: 500px; /* ロゴのデフォルト幅 */
-    --logo-width-mobile: 350px; /* モバイル用のロゴ幅 */
-    --hero-content-gap: 10px; /* ロゴ、h1、pの間隔 */
+    --logo-width: 250px;
+    --logo-width-mobile: 150px;
+    --hero-content-gap: 10px;
+    --card-bg: rgba(255, 255, 255, 0.1); /* 薄い半透明背景 */
+    --card-border: 1px solid var(--neon-purple);
 }
 
 /* リセット */
@@ -61,11 +63,9 @@ nav a:hover {
     align-items: center;
     text-align: center;
     position: relative;
-    background: var(--primary-black); /* 仮の背景 */
-    /* 背景画像はカスタマイズ用にコメント */
-    /* background: url('path/to/your/image.jpg') center/cover no-repeat; */
-    padding: 20px; /* コンテンツの余白 */
-    gap: var(--hero-content-gap); /* ロゴ、h1、pの間隔を統一 */
+    background: var(--primary-black);
+    padding: 20px;
+    gap: var(--hero-content-gap);
 }
 
 .hero::before {
@@ -79,27 +79,26 @@ nav a:hover {
 }
 
 .hero .logo {
-    width: var(--logo-width); /* ロゴサイズ */
-    max-width: 100%; /* コンテナの幅を超えない */
-    height: auto; /* アスペクト比を維持 */
+    width: var(--logo-width);
+    max-width: 100%;
+    height: auto;
     z-index: 1;
     transition: transform var(--transition);
 }
 
-/* ロゴにホバーエフェクト */
 .hero .logo:hover {
     transform: scale(1.1);
     filter: drop-shadow(0 0 10px var(--neon-purple));
 }
 
 .hero h1 {
-    font-size: 3.5rem; /* フォントサイズを少し小さく */
+    font-size: 3.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
 
 .hero p {
-    font-size: 1.3rem; /* 説明も少し小さく */
+    font-size: 1.3rem;
     z-index: 1;
 }
 
@@ -121,6 +120,51 @@ nav a:hover {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 20px;
+}
+
+/* Team Projectsセクション */
+.team-projects {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px; /* 薄い長方形 */
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--neon-purple);
+}
+
+.project-card p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 /* コンテンツ */
@@ -167,32 +211,32 @@ nav a:hover {
     }
 
     .hero h1 {
-        font-size: 2rem; /* モバイルでさらに小さく */
+        font-size: 2rem;
     }
 
     .hero p {
         font-size: 1rem;
     }
 
+    .hero {
+        gap: 8px;
+    }
+
     .about-team h2,
+    .team-projects h2,
     .content h2 {
         font-size: 2rem;
     }
 
-    nav a {
-        font-size: 12px;
-        margin: 0 10px;
-    }
-
-    .hero {
-        gap: 8px; /* モバイルでは間隔をさらに縮める */
+    .project-card {
+        width: 100%; /* モバイルではフル幅 */
+        max-width: 400px;
     }
 }
 
-/* 大画面用の調整 */
 @media (min-width: 1200px) {
     .hero .logo {
-        width: calc(var(--logo-width) * 1.2); /* 大画面でロゴを大きく */
+        width: calc(var(--logo-width) * 1.2);
     }
 
     .hero h1 {
