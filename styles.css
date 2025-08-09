@@ -7,7 +7,7 @@
     --transition: 0.3s ease;
     --logo-width: 500px;
     --logo-width-mobile: 350px;
-    --hero-content-gap: 4px;
+    --hero-content-gap: 3px;
     --card-bg: rgba(255, 255, 255, 0.1);
     --card-border: 1px solid var(--neon-purple);
     --card-width: 350px;
@@ -186,6 +186,50 @@ nav a.active {
     margin: 20px auto 0;
 }
 
+/* Team Rolesセクション */
+.team-roles {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.team-roles h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.role-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    gap: var(--card-gap);
+    justify-content: center;
+}
+
+.role-card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.role-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.role-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--neon-purple);
+}
+
+.role-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 /* コンテンツ */
 .content {
     padding: 50px 20px;
@@ -348,13 +392,15 @@ footer p:hover {
 
     .about-team h2,
     .team-projects h2,
+    .team-roles h2,
     .content h2,
     .tools h1,
     .contract h1 {
         font-size: 2rem;
     }
 
-    .project-card {
+    .project-card,
+    .role-card {
         width: 100%;
         max-width: 400px;
         margin: 10px auto;
@@ -364,6 +410,10 @@ footer p:hover {
     .project-right,
     .project-bottom {
         margin: 10px auto;
+    }
+
+    .role-container {
+        grid-template-columns: 1fr;
     }
 
     .tools p {
