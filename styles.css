@@ -5,8 +5,8 @@
     --neon-purple: #ff00ff;
     --gradient-purple: #4b0082;
     --transition: 0.3s ease;
-    --logo-width: 250px; /* ロゴのデフォルト幅 */
-    --logo-width-mobile: 150px; /* モバイル用のロゴ幅 */
+    --logo-width: 500px; /* ロゴのデフォルト幅 */
+    --logo-width-mobile: 350px; /* モバイル用のロゴ幅 */
     --hero-content-gap: 10px; /* ロゴ、h1、pの間隔 */
 }
 
